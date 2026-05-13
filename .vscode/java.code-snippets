@@ -3,6 +3,7 @@
     "prefix": "cjava",
     "body": [
       "/*",
+      "    by: shiinariku",
       "    @codewars ref: $1",
       "*/",
       "public class ${TM_FILENAME_BASE} {",
@@ -11,5 +12,33 @@
       "}"
     ],
     "description": "Create a public Java class named after the file with a Codewars reference header"
+  },
+  "LeetCode Java Class": {
+    "prefix": "ljava",
+    "body": [
+      "/*",
+      "    by: shiinariku",
+      "    @leetcode ref: $1",
+      "*/",
+      "public class ${TM_FILENAME_BASE} {",
+      "",
+      "    $0",
+      "}"
+    ],
+    "description": "Create a public Java class named after the file with a LeetCode reference header"
+  },
+  "NeetCode Java Class": {
+    "prefix": "njava",
+    "body": [
+      "/*",
+      "    by: shiinariku",
+      "    @neetcode ref: $1",
+      "*/",
+      "public class ${TM_FILENAME_BASE} {",
+      "",
+      "    $0",
+      "}"
+    ],
+    "description": "Create a public Java class named after the file with a NeetCode reference header"
   }
 }
