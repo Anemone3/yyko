@@ -1,0 +1,15 @@
+{
+  "Codewars Java Class": {
+    "prefix": "cjava",
+    "body": [
+      "/*",
+      "    @codewars ref: $1",
+      "*/",
+      "public class ${TM_FILENAME_BASE} {",
+      "",
+      "    $0",
+      "}"
+    ],
+    "description": "Create a public Java class named after the file with a Codewars reference header"
+  }
+}
