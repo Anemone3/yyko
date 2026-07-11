@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 class Habilidades(ABC):
     @abstractmethod
-    def correr(self, uma: Uma) -> float:
+    def correr(self, uma: Uma) -> float:  # type: ignore
         pass
 
 
@@ -24,7 +24,7 @@ class Uma:
         self.habilidad = habilidad
 
     def correr(self):
-        return self.habilidad.correr(self)
+        return self.habilidad.correr(self) # type: ignore
 
 
 class Runner(Habilidades):

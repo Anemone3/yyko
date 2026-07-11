@@ -1,8 +1,11 @@
-class Nodo:
-    value: any
-    next_node: any
+from typing import Any
 
-    def __init__(self, value):
+
+class Nodo:
+    value: Any
+    next_node: Any
+
+    def __init__(self, value: Any):
         self.value = value
         self.next_node = None
 
@@ -10,10 +13,10 @@ class Nodo:
 class ListaEnlazada:
     head: Nodo
 
-    def __init__(self, val: any):
+    def __init__(self, val: Any):
         self.head = Nodo(val)
 
-    def append(self, value):
+    def append(self, value: Any):
         nuevo = Nodo(value)
         punt = self.head
         while punt.next_node is not None:
@@ -27,7 +30,7 @@ class ListaEnlazada:
             punt = punt.next_node
         print("None")
 
-    def find_value(self, value):
+    def find_value(self, value: Any):
         punt = self.head
         bucles = 0
         while punt is not None:
@@ -45,7 +48,6 @@ def main():
     list.append(13)
 
     list.show()
-
 
 
 if __name__ == "__main__":

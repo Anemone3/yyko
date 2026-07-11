@@ -10,7 +10,7 @@ print("str -> ", type("ariku"))
 
 # boolean - flags
 print("boolean ->", type(True))
-if(0 == False):
+if(0 == False): # type: ignore
     print("boolean if 0 == false -> true ", type(True))
     
     
@@ -39,7 +39,7 @@ class Persona:
 
 print("class ->", type(Persona))
 import math
-print("module ->", type(math))
+print("module ->", type(math)) # type: ignore
 
 print("slice ->", type(slice(1, 5)))
 print("ellipsis ->", type(...))

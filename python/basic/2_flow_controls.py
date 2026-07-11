@@ -3,7 +3,7 @@ koyori = False
 result_if = ""
 if koyori:
     result_if = "if"
-elif koyori != True:
+elif koyori != True: # type: ignore
     result_if = "elif"
 else:
     result_if = "else koyori"
@@ -17,7 +17,7 @@ result_match = ""
 match type:
     case "text":
         result_match = "are you seeing a text"
-    case "image":
+    case "image": # type: ignore
         result_match = "are you seeing a image"
     case _:
         result_match = "whatever"
@@ -36,19 +36,19 @@ for n in nums:
     nums.append(n + 1)
     pass
 
-    result_for_and_tools.append("pass")
+    result_for_and_tools.append("pass") # type: ignore
     # print(nums)
     # print(n)
     if 4 == n:
-        result_for_and_tools.append("continue")
+        result_for_and_tools.append("continue") # type: ignore
         nums = [0] * MAX_LIMIT
         continue
 
     if len(nums) >= MAX_LIMIT:
-        result_for_and_tools.append("break")
+        result_for_and_tools.append("break") # type: ignore
         break
 
-print("result for and tools['break','continue','pass']: ", result_for_and_tools)
+print("result for and tools['break','continue','pass']: ", result_for_and_tools) # type: ignore
 
 
 # while
@@ -57,40 +57,40 @@ less_counter = 0
 result_while = []
 while counter < 10:
     # print(counter)
-    result_while.append(counter)
+    result_while.append(counter) # type: ignore
     if less_counter == -3:
-        result_while.append("break")
+        result_while.append("break") # type: ignore
         break
     if counter <= 3:
         counter += 1
-        result_while.append("continue")
+        result_while.append("continue") # type: ignore
         continue
 
     less_counter -= 1
 
 
-print("result while: ", result_while)
+print("result while: ", result_while) # type: ignore
 
 
 # with
 # se necesita tener un proceso, tambien hay manera usando @context_manager para funciones
 class Process:
-    def __init__(self, nombre):
+    def __init__(self, nombre): # type: ignore
         self.nombre = nombre
 
     def __enter__(self):
         print(f"--[INICIO] Preparando proceso: {self.nombre}")
         return self  # esto se asigna al as
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self, exc_type, exc_val, exc_tb): # type: ignore
         if exc_type:
             import traceback
 
             print("--- REPORTE DE ACCIDENTE ---")
             # Extraemos la información del objeto exc_tb
-            detalles = traceback.format_tb(exc_tb)
+            detalles = traceback.format_tb(exc_tb) # type: ignore
             print(f"Mensaje: {exc_val}")
-            print(f"Tipo: {exc_type.__name__}")
+            print(f"Tipo: {exc_type.__name__}") # type: ignore
             print(
                 f"Línea del error: {detalles[-1].strip()}"
             )  # La última línea del rastro
@@ -127,7 +127,7 @@ print(next(gen))
 print(next(gen))
 
 
-def other_store():
+def other_store(): # type: ignore
     mensaje = yield from store()
     print(f"Mensaje recibido de otra funcion con yield: ", mensaje)
     return "New Game"
@@ -156,8 +156,8 @@ if (rango := len(text)) > 5:
     print(f"result usando := ")
 
 
-def calcular_impuesto(val):
-    return val * 0.18
+def calcular_impuesto(val): # type: ignore
+    return val * 0.18 # type: ignore
 
 
 precios = [100, 250, 400]
@@ -172,6 +172,6 @@ facturas = [calcular_impuesto(p) for p in precios if calcular_impuesto(p) > 50]
 print("facturas: ", facturas)
 
 
-datos = {"radio": (r := 10), "circunferencia": 2 * 3.14 * r, "area": 3.14 * (r**2)}
+datos = {"radio": (r := 10), "circunferencia": 2 * 3.14 * r, "area": 3.14 * (r**2)} # type: ignore
 
-print("datos usando := \n",datos)
+print("datos usando := \n",datos) # type: ignore
