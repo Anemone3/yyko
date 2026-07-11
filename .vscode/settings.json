@@ -1,3 +1,4 @@
 {
-  "java.templates.newFile.enabled": false
+  "java.templates.newFile.enabled": false,
+  "python-envs.defaultEnvManager": "ms-python.python:system"
 }
