@@ -1,3 +1,5 @@
+# type: ignore
+
 def count(s:str):
     h_m = {}
     if s == "" or s == None:

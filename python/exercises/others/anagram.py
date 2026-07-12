@@ -1,8 +1,9 @@
+# type: ignore
 s = "arca"
 t = "cara"
 
 
-def anagram(s, t):
+def anagram(s, t): 
     if len(s) != len(t):
         return False
     # char int list (lo usaremos para insertar datos en los indices, -1 o 1, si la letra
