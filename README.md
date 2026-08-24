@@ -6,15 +6,14 @@
 
 ### C++
 ```bash
-# Forma 1: Separado
-g++ -std=c++17 -o salida archivo.cpp
-./salida
+# Solo ver resultado (no guarda binario)
+g++ -std=c++17 archivo.cpp && ./a.out
 
-# Forma 2: De un saque
+# Guardar binario con nombre propio
 g++ -std=c++17 -o salida archivo.cpp && ./salida
 
 # Clang (alternativa)
-clang++ -std=c++17 -o salida archivo.cpp && ./salida
+clang++ -std=c++17 archivo.cpp && ./a.out
 ```
 
 ### Java
