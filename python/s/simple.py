@@ -83,3 +83,15 @@ maria = {
     "Carlos",
     "Ana",
 }
+s_t = juan.intersection(maria)
+s_t = juan & maria
+
+###
+history_search = [
+    ("VISIT", "google.com"),
+    ("VISIT", "github.com"),
+    ("VISIT", "stackoverflow.com"),
+    ("BACK",),
+    ("BACK",),
+    ("VISIT", "python.org"),
+]
