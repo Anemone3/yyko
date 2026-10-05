@@ -8,7 +8,7 @@ https://github.com/mouredev/Weekly-Challenge-2022-Kotlin/blob/main/app/src/main/
 """
 
 
-def get_bin(number: int | float) -> str:
+def get_bin(number: float) -> str:
     n = number // 1
     d = number - n
     bin_n = []

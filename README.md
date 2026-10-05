@@ -4,6 +4,16 @@
 
 ## Ejecutar archivos
 
+### Python (LeetCode)
+```bash
+# El lenguaje es Python por defecto
+python test.py contains_duplicates "[1, 2, 3, 3]"
+python test.py is_anagram rat car
+
+# Tambien se puede indicar explicitamente para extender el runner a otros lenguajes
+python test.py --language python contains_duplicates "[1, 2, 3, 3]"
+```
+
 ### C++
 ```bash
 # Solo ver resultado (no guarda binario)
